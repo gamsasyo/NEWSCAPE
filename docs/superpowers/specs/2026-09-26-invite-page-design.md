@@ -104,7 +104,7 @@ NEWSCAPE/
 Apps Script 배포는 계정에 묶이므로 "소유권 이전"이 아니라 재배포:
 1. 갤러리 계정으로 로그인 → 새 시트 생성 → 확장 프로그램 > Apps Script → `apps-script/Code.gs` 붙여넣기
 2. 배포 > 새 배포 > 웹 앱 (실행: 나, 액세스: 모든 사용자) → 새 URL 발급
-3. `.env` 의 `VITE_RSVP_ENDPOINT` 를 새 URL로 교체 → Vercel 재배포
+3. `.env` 의 `VITE_RSVP_ENDPOINT` 를 새 URL로 교체 → 푸시(자동 재배포)
 4. 기존 시트 행은 복사-붙여넣기로 이관
 → 이 절차를 `apps-script/README.md` 에 그대로 적어둠.
 
