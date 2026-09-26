@@ -44,6 +44,14 @@ p + p { margin-top: 1.4em; }
 #intro.show img { opacity: 1; }
 #intro.hide { opacity: 0; transition: opacity .8s var(--ease); pointer-events: none; }
 
+/* ── 상단 마스크: 상태바(카톡 '돌아가기' 등) 밑으로 글이 겹쳐 보이지 않게 ── */
+.topmask {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 30;
+  height: calc(env(safe-area-inset-top, 0px) + 28px);
+  background: linear-gradient(to bottom, var(--bg) calc(100% - 22px), transparent);
+  pointer-events: none;
+}
+
 /* ── 본문 ───────────────────────────── */
 #page {
   opacity: 0;
