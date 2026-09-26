@@ -79,7 +79,7 @@ p + p { margin-top: 1.4em; }
 .hero h1 { font-size: 1em; font-weight: 400; margin: 0; }
 .tagline { margin-top: 1.4em; }
 
-.story { padding-block: 4em 2em; }
+.story { padding-block: 4em 0; }
 .story > * + * { margin-top: 1.4em; }
 .story .text + .text { margin-top: 1.4em; }
 
@@ -100,7 +100,9 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 
 /* ── 서명 / 정보 ─────────────────────── */
 .story .sign { margin-top: calc(var(--lh) * 3em); }  /* 서명 앞 3줄 띄움 */
-.info { padding-block: 5em 2em; }
+/* 서명 → "NEWSCAPE 개관" 간격 = 히어로의 "모시는 글" → "Leave the noise" 간격과 동일
+   (히어로: 100svh − 위 10svh − 아래 14svh − 제목 1줄 − 태그라인 2줄) */
+.info { padding-block: calc(76svh - var(--lh) * 3em) 2em; }
 .info h2 { font-size: 1em; font-weight: 500; margin: 0 0 1.2em; }
 .info dl { margin: 0; }
 .info dt { font-size: .78em; color: var(--muted); margin-top: 1.4em; }
