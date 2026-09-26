@@ -142,8 +142,3 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .credits { padding-block: 3em 6em; font-size: .72em; color: var(--muted); line-height: 1.7; }
 .credits p + p { margin-top: .2em; }
 .credits .work { color: var(--fg); margin-bottom: 1em; }
-
-/* ── 모션 감소 ──────────────────────── */
-@media (prefers-reduced-motion: reduce) {
-  #intro, #page { transition: none; }
-}

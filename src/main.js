@@ -7,21 +7,17 @@ import { initGallery } from './gallery.js';
 import { initRsvp } from './rsvp.js';
 
 history.scrollRestoration = 'manual';
-const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let lenis = null;
-if (!reduced) {
-  lenis = new Lenis({ autoRaf: true, lerp: 0.09, smoothWheel: true });
-  lenis.stop();                 // 인트로 동안 스크롤 잠금
-  window.scrollTo(0, 0);
-}
+// 초대장 연출이라 OS의 '동작 줄이기' 설정과 무관하게 인트로·자동 스크롤을 항상 켠다 (재영 결정 2026-09-26)
+const lenis = new Lenis({ autoRaf: true, lerp: 0.09, smoothWheel: true });
+lenis.stop();                   // 인트로 동안 스크롤 잠금
+window.scrollTo(0, 0);
 
 initGallery(lenis);
 initRsvp();
 initLinks();
 
-playIntro({ reduced }).then(() => {
-  if (!lenis) return;
+playIntro().then(() => {
   lenis.start();
   armAutoScroll(lenis, 1500);
 });

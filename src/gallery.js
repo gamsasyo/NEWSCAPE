@@ -11,8 +11,8 @@ export function initGallery(lenis) {
     wheelToZoom: true,
     showHideAnimationType: 'fade',
   });
-  lightbox.on('openingAnimationStart', () => lenis?.stop());
-  lightbox.on('close', () => lenis?.start());
+  lightbox.on('openingAnimationStart', () => lenis.stop());
+  lightbox.on('close', () => lenis.start());
   lightbox.init();
   return lightbox;
 }
