@@ -1,0 +1,36 @@
+{
+  "texture": {
+    "src": "4591AEBD-0011-4A32-AD99-3591FDE751A8.jpeg",
+    "width": 8531,
+    "height": 11375,
+    "sizes": {
+      "1200": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 157818
+      },
+      "2400": {
+        "width": 1800,
+        "height": 2400,
+        "bytes": 834766
+      }
+    }
+  },
+  "panorama": {
+    "src": "main visual.jpg",
+    "width": 11761,
+    "height": 5880,
+    "sizes": {
+      "1200": {
+        "width": 1200,
+        "height": 600,
+        "bytes": 88446
+      },
+      "2400": {
+        "width": 2400,
+        "height": 1200,
+        "bytes": 315352
+      }
+    }
+  }
+}
