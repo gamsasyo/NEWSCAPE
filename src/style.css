@@ -105,6 +105,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .info dl { margin: 0; }
 .info dt { font-size: .78em; color: var(--muted); margin-top: 1.4em; }
 .info dd { margin: .2em 0 0; }
+.info figure { margin-top: calc(var(--lh) * 1em); }  /* 개관 프로그램 밑: 줄바꿈 한 줄만 */
 .info .text { max-width: 22em; }
 
 .links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: 1.2em; }
