@@ -77,7 +77,7 @@ p + p { margin-top: 1.4em; }
   padding-block: 10svh 14svh;
 }
 .hero h1 { font-size: 1em; font-weight: 400; margin: 0; }
-.tagline { margin-top: 1.4em; }
+.tagline { margin-top: 1.4em; font-size: 2em; line-height: 1.25; }
 
 .story { padding-block: 4em 2em; }
 .story > * + * { margin-top: 1.4em; }
