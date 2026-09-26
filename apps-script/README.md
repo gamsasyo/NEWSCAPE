@@ -19,7 +19,7 @@
    ```
    VITE_RSVP_ENDPOINT=https://script.google.com/macros/s/…/exec
    ```
-   Vercel에서는 Settings > Environment Variables 에 같은 키로 등록 → 재배포
+   GitHub에서는 리포 Settings > Secrets and variables > Actions 에 `VITE_RSVP_ENDPOINT` 시크릿 등록 → 푸시(또는 Actions 재실행)
 7. 브라우저에서 웹 앱 URL 열어보면 `{"ok":true,"service":"newscape-rsvp"}` 나오면 정상
 
 ## 코드 수정 후 재배포
@@ -32,7 +32,7 @@
 Apps Script 배포는 계정에 묶여 있어서 소유권 이전이 아니라 **재배포**로 처리:
 
 1. 갤러리 계정으로 로그인 → 위 "최초 배포" 1–5 반복 → 새 URL
-2. `.env` / Vercel 환경변수의 `VITE_RSVP_ENDPOINT` 를 새 URL로 교체 → 재배포
+2. `.env` / GitHub 시크릿의 `VITE_RSVP_ENDPOINT` 를 새 URL로 교체 → 재배포
 3. 기존 시트의 `RSVP` 탭 행들을 새 시트로 복사
 4. 이전 배포는 **배포 관리 > 보관처리**
 

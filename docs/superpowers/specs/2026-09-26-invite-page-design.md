@@ -25,7 +25,7 @@
 | 폰트 | Noto Serif KR (Google Fonts, 400/500) | 목업과 일치. 웹폰트 subset 로딩 |
 | 명단 저장 | **Google Sheets + Apps Script Web App** | 서버 0, 시트가 곧 관리자 화면. 일단 재영 개인 계정으로 배포, 나중에 갤러리 대표 구글 계정으로 이관 (아래 이관 절차 참조) |
 | 지도 | **지도 API 없음.** 주소 블록 + [네이버지도 열기] [카카오맵 열기] [주소 복사] 버튼 | NCP 키·도메인 등록 불필요. 폰에선 앱으로 바로 열리는 게 더 편함. 나중에 지도 스크린샷 넣을 `<figure>` 슬롯만 비워둠 |
-| 호스팅 | Vercel 무료 (`*.vercel.app`) | 도메인은 나중에 붙이면 됨 (Vercel 대시보드에서 CNAME 하나) |
+| 호스팅 | GitHub Pages (public 리포, Actions 자동 배포) → https://gamsasyo.github.io/NEWSCAPE/ | Vercel은 로그인 필요해서 폐기. 커스텀 도메인은 Pages 설정에서 CNAME + `BASE_PATH` 제거 |
 | 자동 스크롤 정책 | 사용자가 터치/휠 하는 순간 **영구 정지** | 읽던 곳 되돌아갔는데 다시 밀리면 짜증. 상수 하나로 "idle 후 재개"로 전환 가능 |
 | reduced-motion | 자동 스크롤·인트로 페이드 생략 | 접근성 |
 
@@ -124,7 +124,7 @@ Apps Script 배포는 계정에 묶이므로 "소유권 이전"이 아니라 재
 3. 로고 인트로 + Lenis + 자동 스크롤/정지 로직
 4. RSVP 폼 + Apps Script (재영이 배포 → URL 받아서 env에 넣기)
 5. 오시는 길 블록 (주소 + 딥링크 3버튼)
-6. Vercel 배포 + 실기기 테스트 (iPhone Safari/Chrome, Android Chrome, 데스크탑)
+6. GitHub Pages 배포 + 실기기 테스트 (iPhone Safari/Chrome, Android Chrome, 데스크탑)
 
 ## 검증
 
