@@ -99,7 +99,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 }
 
 /* ── 서명 / 정보 ─────────────────────── */
-.sign { margin-top: 3em; }
+.story .sign { margin-top: calc(var(--lh) * 3em); }  /* 서명 앞 3줄 띄움 */
 .info { padding-block: 5em 2em; }
 .info h2 { font-size: 1em; font-weight: 500; margin: 0 0 1.2em; }
 .info dl { margin: 0; }
