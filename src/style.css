@@ -14,7 +14,7 @@
 html { background: var(--bg); -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  font-family: "Noto Serif KR", "Apple SD Gothic Neo", serif;
+  font-family: "agchoijeongho-screen", "Noto Serif KR", "Apple SD Gothic Neo", serif;
   font-weight: 400;
   font-size: var(--fs);
   line-height: var(--lh);
@@ -36,7 +36,8 @@ p + p { margin-top: 1.4em; }
   background: var(--bg);
 }
 #intro img {
-  width: clamp(120px, 34vw, 180px);
+  width: clamp(130px, 36vw, 190px);
+  height: auto;
   opacity: 0;
   transition: opacity .8s var(--ease);
 }

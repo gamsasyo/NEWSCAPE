@@ -10,6 +10,8 @@ export function armAutoScroll(lenis, delayMs = 1500) {
   let raf = 0;
   let last = 0;
   let timer = 0;
+  let pos = 0; // 우리가 누적하는 소수점 위치. lenis.scroll 을 매 프레임 다시 읽으면
+               // iOS(정수 scrollY)에서 반올림돼 제자리걸음이 되므로 여기서만 관리한다.
 
   const typing = () => /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName ?? '');
 
@@ -17,16 +19,17 @@ export function armAutoScroll(lenis, delayMs = 1500) {
     if (!running) return;
     const dt = Math.min((now - last) / 1000, 0.05);
     last = now;
-    if (lenis.isStopped || typing()) { raf = requestAnimationFrame(tick); return; }
-    const next = lenis.scroll + SPEED_PX_PER_S * dt;
-    if (next >= lenis.limit) { pause(); return; }          // 바닥: 멈추고 다음 입력 대기
-    lenis.scrollTo(next, { immediate: true, force: true });
+    if (lenis.isStopped || typing()) { pos = lenis.scroll; raf = requestAnimationFrame(tick); return; }
+    pos += SPEED_PX_PER_S * dt;
+    if (pos >= lenis.limit) { pause(); return; }           // 바닥: 멈추고 다음 입력 대기
+    lenis.scrollTo(pos, { immediate: true, force: true });
     raf = requestAnimationFrame(tick);
   };
 
   const start = () => {
     if (running) return;
     running = true;
+    pos = lenis.scroll;
     last = performance.now();
     raf = requestAnimationFrame(tick);
   };
