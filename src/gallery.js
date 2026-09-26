@@ -7,6 +7,7 @@ export function initGallery(lenis) {
     children: 'a[data-pswp-width]',
     pswpModule: () => import('photoswipe'),
     bgOpacity: 1,
+    zoom: false,
     padding: { top: 0, bottom: 0, left: 0, right: 0 },
     wheelToZoom: true,
     showHideAnimationType: 'fade',

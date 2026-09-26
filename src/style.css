@@ -90,15 +90,6 @@ figure {
   position: relative;
 }
 figure a { display: block; position: relative; cursor: zoom-in; }
-figure a::after {
-  content: "+";
-  position: absolute; left: 50%; top: 50%;
-  translate: -50% -50%;
-  color: #fff; font-family: Helvetica, Arial, sans-serif; font-weight: 300;
-  font-size: 2rem; line-height: 1;
-  text-shadow: 0 0 6px rgba(0,0,0,.35);
-  pointer-events: none;
-}
 figure img { width: 100%; background: #eee; }
 figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 /* 폰 가로모드: 이미지는 화면 높이에 맞춰 줄이고 가운데 정렬 (텍스트는 그대로 좌측) */
