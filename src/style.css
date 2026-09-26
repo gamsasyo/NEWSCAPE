@@ -151,4 +151,3 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 
 .credits { padding-block: 3em 6em; }
 .credits p + p { margin-top: .2em; }
-.credits .work { color: var(--fg); margin-bottom: 1em; }
