@@ -54,10 +54,14 @@ p + p { margin-top: 1.4em; }
 .col {
   padding-inline: var(--gutter);
 }
+.text { max-width: var(--measure); }
+/* 태블릿·데스크탑: 본문을 이미지 폭에 맞춰 넓게. 폰에서만 짧은 시행(詩行) 느낌 */
+@media (min-width: 600px) {
+  .text, .info .text { max-width: var(--figure-max); }
+}
 @media (min-width: 900px) {
   .col { padding-inline-start: clamp(2.5rem, 12vw, 14rem); }
 }
-.text { max-width: var(--measure); }
 
 .hero {
   min-height: 100svh;
@@ -100,7 +104,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .info dl { margin: 0; }
 .info dt { font-size: .78em; color: var(--muted); margin-top: 1.4em; }
 .info dd { margin: .2em 0 0; }
-.info .text { max-width: 20em; }
+.info .text { max-width: 22em; }
 
 .links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: 1.2em; }
 .btn {
