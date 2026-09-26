@@ -44,8 +44,8 @@ console.log('\nmanifest → public/img/manifest.json');
 // 로고: image/logo/logo.png → public/img/logo.png (720px, 투명 여백 트림) + public/favicon.png (128px)
 try {
   const logo = sharp('image/logo/logo.png').trim();
-  const a = await logo.clone().resize({ width: 720 }).png({ compressionLevel: 9 }).toFile('public/img/logo.png');
-  const b = await logo.clone().resize({ width: 128 }).png().toFile('public/favicon.png');
+  const a = await logo.clone().resize({ width: 720, withoutEnlargement: true }).png({ compressionLevel: 9, palette: true }).toFile('public/img/logo.png');
+  const b = await logo.clone().resize({ width: 128 }).png({ palette: true }).toFile('public/favicon.png');
   console.log(`public/img/logo.png ${a.width}x${a.height} ${(a.size / 1024).toFixed(0)}KB / favicon ${b.width}x${b.height}`);
 } catch (e) {
   console.log('logo skipped:', e.message);
