@@ -19,7 +19,7 @@ initLinks();
 
 playIntro().then(() => {
   lenis.start();
-  armAutoScroll(lenis, 1500);
+  armAutoScroll(lenis, 500);   // 글 나타나는 중에 바로 출발 (기존 1500의 1/3)
 });
 
 function initLinks() {
