@@ -129,10 +129,10 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 
 /* ── RSVP ───────────────────────────── */
 .rsvp { padding-block: 4em 3em; }
-.rsvp h2 { font-size: 1em; font-weight: 500; margin: 0 0 1.2em; }
+.rsvp h2 { font-size: .78em; font-weight: 500; margin: 0 0 1.2em; }
 .rsvp form { max-width: 20em; display: grid; gap: 1.2em; }
 .field { display: grid; gap: .35em; }
-.field label { font-size: .78em; color: var(--muted); }
+.field label { font-size: 1em; color: var(--muted); }
 .field input {
   font: inherit; color: var(--fg); background: transparent;
   border: 0; border-bottom: 1px solid var(--fg); border-radius: 0;
