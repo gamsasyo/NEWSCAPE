@@ -1,35 +1,18 @@
 {
-  "texture": {
-    "src": "4591AEBD-0011-4A32-AD99-3591FDE751A8.jpeg",
-    "width": 8531,
-    "height": 11375,
-    "sizes": {
-      "1200": {
-        "width": 900,
-        "height": 1200,
-        "bytes": 157818
-      },
-      "2400": {
-        "width": 1800,
-        "height": 2400,
-        "bytes": 834766
-      }
-    }
-  },
   "birds": {
     "src": "birds.jpeg",
-    "width": 4032,
-    "height": 3024,
+    "width": 1477,
+    "height": 1477,
     "sizes": {
       "1200": {
         "width": 1200,
-        "height": 900,
-        "bytes": 12074
+        "height": 1200,
+        "bytes": 25976
       },
       "2400": {
-        "width": 2400,
-        "height": 1800,
-        "bytes": 51638
+        "width": 1477,
+        "height": 1477,
+        "bytes": 35260
       }
     }
   },
@@ -47,6 +30,23 @@
         "width": 2400,
         "height": 1200,
         "bytes": 315352
+      }
+    }
+  },
+  "texture": {
+    "src": "texture.jpeg",
+    "width": 4284,
+    "height": 5712,
+    "sizes": {
+      "1200": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 364706
+      },
+      "2400": {
+        "width": 1800,
+        "height": 2400,
+        "bytes": 1395862
       }
     }
   },

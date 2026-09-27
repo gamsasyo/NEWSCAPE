@@ -10,7 +10,6 @@ const WIDTHS = [1200, 2400];
 // 파일명이 지저분한 원본은 여기서 slug 지정. 없으면 파일명 기반 slug.
 const ALIAS = {
   'main visual.jpg': 'panorama',
-  '4591AEBD-0011-4A32-AD99-3591FDE751A8.jpeg': 'texture',
 };
 
 const slugify = (f) =>

@@ -28,10 +28,6 @@ jobs:
         env:
           BASE_PATH: /
           VITE_RSVP_ENDPOINT: ${{ secrets.VITE_RSVP_ENDPOINT }}
-      # 초대 페이지 = newscape.mov 루트. 한때 쓴 /rsvp 링크는 루트로 넘김 (2026-09-27)
-      - run: |
-          mkdir -p dist/rsvp
-          cp redirect.html dist/rsvp/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
