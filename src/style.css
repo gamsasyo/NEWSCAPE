@@ -3,7 +3,7 @@
   --fg: #111;
   --muted: #777;
   --gutter: clamp(1.5rem, 6vw, 2.5rem);
-  --measure: 11em;          /* 좁은 단. keep-all 과 함께 목업의 짧은 줄 만듦 */
+  --measure: var(--figure-max); /* 줄바꿈은 HTML의 <br>로 고정 (2026-09-27 재영 배치안) */
   --figure-max: 760px;
   --fs: clamp(25px, 6.8vw, 30px);   /* 2026-09-27 재영: 27~32px에서 2px 줄임 */
   --lh: 1.65;
@@ -63,10 +63,6 @@ p + p { margin-top: 1.4em; }
   padding-inline: var(--gutter);
 }
 .text { max-width: var(--measure); }
-/* 태블릿·데스크탑: 본문을 이미지 폭에 맞춰 넓게. 폰에서만 짧은 시행(詩行) 느낌 */
-@media (min-width: 600px) {
-  .text, .info .text { max-width: var(--figure-max); }
-}
 @media (min-width: 900px) {
   .col { padding-inline-start: clamp(2.5rem, 12vw, 14rem); }
 }
@@ -107,7 +103,6 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .info dl { margin: 0; }
 .info dt { font-size: .78em; color: var(--muted); margin-top: 1.4em; }
 .info dd { margin: .2em 0 0; }
-.info .text { max-width: 22em; }
 
 .links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: 1.2em; }
 .btn {
@@ -143,9 +138,9 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .rsvp .status.err { color: #b3261e; }
 
 .credits { padding-block: 3em 6em; }
-.credits p + p { margin-top: .2em; }
+.credits p + p { margin-top: 1.4em; }
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
 .video { max-width: var(--figure-max); aspect-ratio: 16 / 9; background: #eee; margin-bottom: 3em; }
 .video iframe { width: 100%; height: 100%; border: 0; display: block; }
-.credits .work { margin-bottom: 1.4em; }
+.info .work { margin-bottom: 3em; }
