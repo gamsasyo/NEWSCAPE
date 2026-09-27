@@ -114,13 +114,6 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .btn:hover, .btn:focus-visible { background: var(--fg); color: var(--bg); outline: none; }
 .btn[disabled] { opacity: .45; cursor: default; }
 
-.toast {
-  position: fixed; left: 50%; bottom: max(1.5rem, env(safe-area-inset-bottom));
-  translate: -50% 0; background: var(--fg); color: var(--bg);
-  font-size: .8em; padding: .6em 1.1em; border-radius: 999px;
-  opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 40;
-}
-.toast.on { opacity: 1; }
 
 /* ── RSVP ───────────────────────────── */
 .rsvp { padding-block: 4em 3em; }

@@ -27,15 +27,8 @@ playIntro().then(() => {
 });
 
 function initLinks() {
-  const toast = document.getElementById('toast');
-  document.getElementById('copy-addr')?.addEventListener('click', async (e) => {
-    const addr = e.currentTarget.dataset.addr;
-    try { await navigator.clipboard.writeText(addr); show('주소를 복사했습니다'); }
-    catch { show(addr); }
+  // 주소 복사: 알림 팝업 없이 조용히 복사만 (재영 2026-09-27)
+  document.getElementById('copy-addr')?.addEventListener('click', (e) => {
+    navigator.clipboard?.writeText(e.currentTarget.dataset.addr).catch(() => {});
   });
-  let t;
-  function show(msg) {
-    toast.textContent = msg; toast.classList.add('on');
-    clearTimeout(t); t = setTimeout(() => toast.classList.remove('on'), 1800);
-  }
 }
