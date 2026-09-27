@@ -1,7 +1,7 @@
 // 천천히 자동 스크롤.
 // 사용자가 손대면(휠/터치/키) 멈추고, IDLE_MS 동안 가만히 있으면 다시 내려간다.
 // 입력창에 포커스가 있거나 Lenis가 멈춘 상태(전체화면 이미지)에서는 움직이지 않는다.
-const SPEED_PX_PER_S = 38;
+const SPEED_PX_PER_S = 60; // 60fps 기준 프레임당 정확히 1px → iOS 정수 스크롤에서 리듬이 고름 (2026-09-27)
 const IDLE_MS = 3000;
 const USER_EVENTS = ['wheel', 'touchstart', 'pointerdown', 'keydown'];
 
