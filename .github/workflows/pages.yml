@@ -26,17 +26,15 @@ jobs:
       - run: npm ci
       - run: npm run build
         env:
-          BASE_PATH: /rsvp/
+          BASE_PATH: /
           VITE_RSVP_ENDPOINT: ${{ secrets.VITE_RSVP_ENDPOINT }}
-      # 초대 페이지는 newscape.mov/rsvp/ , 루트는 /rsvp/ 로 넘김 (나중에 갤러리 본 사이트 자리)
+      # 초대 페이지 = newscape.mov 루트. 한때 쓴 /rsvp 링크는 루트로 넘김 (2026-09-27)
       - run: |
-          mkdir site
-          mv dist site/rsvp
-          cp site/rsvp/favicon.png site/favicon.png
-          cp redirect.html site/index.html
+          mkdir -p dist/rsvp
+          cp redirect.html dist/rsvp/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: dist
 
   deploy:
     needs: build
