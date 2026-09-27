@@ -108,7 +108,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: 1.2em; }
 .btn {
   appearance: none; border: 1px solid var(--fg); background: transparent; color: var(--fg);
-  font: inherit; font-size: .56em; padding: .55em 1em; border-radius: 999px;  /* 재영 2026-09-27: 70% (.8 → .56) */
+  font: inherit; font-size: .78em; padding: .55em 1em; border-radius: 999px;  /* 재영 2026-09-27: 자전거·대중교통 라벨(dt)과 같은 크기 */
   cursor: pointer; transition: background .2s, color .2s;
 }
 .btn:hover, .btn:focus-visible { background: var(--fg); color: var(--bg); outline: none; }
@@ -134,7 +134,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
   padding: .3em 0; outline: none; width: 100%;
 }
 .field input:focus { border-bottom-width: 2px; }
-.rsvp .btn { justify-self: start; font-size: .63em; padding: .7em 1.6em; }  /* 70% (.9 → .63) */
+.rsvp .btn { justify-self: start; font-size: .78em; padding: .7em 1.6em; }  /* 라벨과 같은 크기 */
 .rsvp .status { font-size: .85em; min-height: 1.6em; }
 .rsvp .status.err { color: #b3261e; }
 
