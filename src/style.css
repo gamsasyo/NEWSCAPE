@@ -5,7 +5,7 @@
   --gutter: clamp(1.5rem, 6vw, 2.5rem);
   --measure: 11em;          /* 좁은 단. keep-all 과 함께 목업의 짧은 줄 만듦 */
   --figure-max: 760px;
-  --fs: clamp(27px, 7.3vw, 32px);   /* 2026-09-26 재영: 원래(19~23px)의 1.4배 */
+  --fs: clamp(25px, 6.8vw, 30px);   /* 2026-09-27 재영: 27~32px에서 2px 줄임 */
   --lh: 1.65;
   --ease: cubic-bezier(.22,.61,.36,1);
 }
