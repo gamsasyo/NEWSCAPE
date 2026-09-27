@@ -138,8 +138,8 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .rsvp .status { font-size: .85em; min-height: 1.6em; }
 .rsvp .status.err { color: #b3261e; }
 
-.credits { padding-block: 3em 6em; }
-.credits p + p { margin-top: 1.4em; }
+.credits { padding-block: calc(var(--fs) * 3) calc(var(--fs) * 6); font-size: .72em; color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
+.credits p + p { margin-top: calc(var(--lh) * 1em); }  /* 그룹 사이 한 줄 */
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
 .video { max-width: var(--figure-max); aspect-ratio: 16 / 9; background: #eee; }
