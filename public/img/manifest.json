@@ -16,6 +16,23 @@
       }
     }
   },
+  "birds": {
+    "src": "birds.jpeg",
+    "width": 4032,
+    "height": 3024,
+    "sizes": {
+      "1200": {
+        "width": 1200,
+        "height": 900,
+        "bytes": 12074
+      },
+      "2400": {
+        "width": 2400,
+        "height": 1800,
+        "bytes": 51638
+      }
+    }
+  },
   "panorama": {
     "src": "main visual.jpg",
     "width": 11761,
@@ -30,6 +47,23 @@
         "width": 2400,
         "height": 1200,
         "bytes": 315352
+      }
+    }
+  },
+  "tree": {
+    "src": "tree.jpeg",
+    "width": 3024,
+    "height": 4032,
+    "sizes": {
+      "1200": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 131084
+      },
+      "2400": {
+        "width": 1800,
+        "height": 2400,
+        "bytes": 392828
       }
     }
   }
