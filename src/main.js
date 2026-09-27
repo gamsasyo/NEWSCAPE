@@ -16,6 +16,7 @@ window.scrollTo(0, 0);
 initGallery(lenis);
 initRsvp();
 initLinks();
+if (location.search.includes('debug')) import('./debug.js').then((m) => m.initDebug(lenis));
 
 playIntro().then(() => {
   lenis.start();
