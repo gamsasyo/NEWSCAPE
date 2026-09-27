@@ -14,7 +14,7 @@ function doPost(e) {
     const ua = String(data.ua || '').slice(0, 200);
     if (!name || phone.length < 9) return json({ ok: false, error: 'invalid' });
 
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    const ss = SpreadsheetApp.getActiveSpreadsheet() || SpreadsheetApp.openById('1tKsiU-tbvLtvvDKHLLbfnesXSWyoDgwn91Fv3djMib4');
     let sh = ss.getSheetByName(SHEET_NAME);
     if (!sh) {
       sh = ss.insertSheet(SHEET_NAME);
