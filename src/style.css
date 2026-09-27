@@ -143,6 +143,9 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
 .video { max-width: var(--figure-max); aspect-ratio: 16 / 9; background: #eee; }
+.story .video { margin-top: calc(var(--lh) * 2em); }  /* 사진과 같은 위 2줄 */
 .video iframe { width: 100%; height: 100%; border: 0; display: block; }
-.info .work { font-size: .72em; color: var(--muted); margin: .6em 0 4em; }  /* 영상 아래 바로, 작은 회색 (디렉터 요청) */
+.work { font-size: .72em; color: var(--muted); }
+.story .video + .work { margin-top: .6em; }
+.story .work + .text { margin-top: calc(var(--lh) * 2em); }  /* 크레딧 아래 2줄 */
 @media (min-width: 600px) { .work br.m { display: none; } }  /* 데스크탑: 한글 한 줄, 영문 한 줄 */
