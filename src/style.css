@@ -134,7 +134,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
   padding: .3em 0; outline: none; width: 100%;
 }
 .field input:focus { border-bottom-width: 2px; }
-.rsvp .btn { justify-self: start; font-size: .78em; padding: .7em 1.6em; }  /* 라벨과 같은 크기 */
+.rsvp .btn { justify-self: start; }  /* 크기·여백은 지도 버튼(.btn)과 동일 */
 .rsvp .status { font-size: .85em; min-height: 1.6em; }
 .rsvp .status.err { color: #b3261e; }
 
