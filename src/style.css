@@ -145,3 +145,4 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .video { max-width: var(--figure-max); aspect-ratio: 16 / 9; background: #eee; }
 .video iframe { width: 100%; height: 100%; border: 0; display: block; }
 .info .work { font-size: .72em; color: var(--muted); margin: .6em 0 4em; }  /* 영상 아래 바로, 작은 회색 (디렉터 요청) */
+@media (min-width: 600px) { .work br.m { display: none; } }  /* 데스크탑: 한글 한 줄, 영문 한 줄 */
