@@ -5,6 +5,7 @@ import { playIntro } from './intro.js';
 import { armAutoScroll } from './autoscroll.js';
 import { initGallery } from './gallery.js';
 import { initRsvp } from './rsvp.js';
+import { initSound } from './sound.js';
 
 history.scrollRestoration = 'manual';
 
@@ -16,9 +17,11 @@ window.scrollTo(0, 0);
 initGallery(lenis);
 initRsvp();
 initLinks();
+const sound = initSound();
 if (location.search.includes('debug')) import('./debug.js').then((m) => m.initDebug(lenis));
 
 playIntro().then(() => {
+  sound.start();               // 로고 끝나면 영상(반복) 재생 + 소리 켜기 시도
   lenis.start();
   armAutoScroll(lenis, 500);   // 글 나타나는 중에 바로 출발 (기존 1500의 1/3)
 });
