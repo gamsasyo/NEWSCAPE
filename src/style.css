@@ -77,11 +77,12 @@ p + p { margin-top: 1.4em; }
 
 .story { padding-block: 4em 0; }
 .story > * + * { margin-top: 1.4em; }
+.story figure { margin-block: calc(var(--lh) * 2em); }  /* 위 형제 규칙(1.4em)보다 우선 */
 .story .text + .text { margin-top: 1.4em; }
 
 /* ── 이미지 ─────────────────────────── */
 figure {
-  margin: 3.5em 0;
+  margin: calc(var(--lh) * 2em) 0;   /* 사진 위아래 정확히 2줄 (재영 2026-09-27) */
   max-width: var(--figure-max);
   position: relative;
 }
