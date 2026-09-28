@@ -25,7 +25,7 @@
 | 폰트 | Noto Serif KR (Google Fonts, 400/500) | 목업과 일치. 웹폰트 subset 로딩 |
 | 명단 저장 | **Google Sheets + Apps Script Web App** | 서버 0, 시트가 곧 관리자 화면. 일단 재영 개인 계정으로 배포, 나중에 갤러리 대표 구글 계정으로 이관 (아래 이관 절차 참조) |
 | 지도 | **지도 API 없음.** 주소 블록 + [네이버지도 열기] [카카오맵 열기] [주소 복사] 버튼 | NCP 키·도메인 등록 불필요. 폰에선 앱으로 바로 열리는 게 더 편함. 나중에 지도 스크린샷 넣을 `<figure>` 슬롯만 비워둠 |
-| 호스팅 | GitHub Pages (public 리포, Actions 자동 배포) → https://gamsasyo.github.io/NEWSCAPE/ | Vercel은 로그인 필요해서 폐기. 커스텀 도메인은 Pages 설정에서 CNAME + `BASE_PATH` 제거 |
+| 호스팅 | GitHub Pages (public 리포, Actions 자동 배포) → https://newscape.mov (옛 github.io 주소는 301로 넘어감) | Vercel은 로그인 필요해서 폐기 |
 | 자동 스크롤 정책 | 손대면 멈춤 → **3초 가만히 있으면 재개** (2026-09-26 재영 요청). 입력창 포커스·전체화면 중엔 정지 | 직접 스크롤로 이동한 뒤에도 자동 진행이 이어지길 원함 |
 | reduced-motion | **무시** — 동작 줄이기 켜져 있어도 인트로·자동 스크롤 동일 (2026-09-26 재영 결정) | 초대장 연출이 핵심. 원하면 직접 스크롤로 제어 가능 |
 
