@@ -5,8 +5,8 @@
   --gutter: clamp(1.5rem, 6vw, 2.5rem);
   --measure: var(--figure-max); /* 줄바꿈은 HTML의 <br>로 고정 (2026-09-27 재영 배치안) */
   --figure-max: 760px;
-  --fs: clamp(25px, 6.8vw, 30px);   /* 2026-09-27 재영: 27~32px에서 2px 줄임 */
-  --lh: 1.65;
+  --fs: clamp(29px, calc(6.8vw + 4px), 34px);   /* 2026-09-29 재영: 전체 4px 키움 (25~30 → 29~34) */
+  --lh: 1.4;   /* 2026-09-29 재영: 1.65에서 15% 좁힘 */
   --ease: cubic-bezier(.22,.61,.36,1);
 }
 
@@ -142,3 +142,4 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .story .video + .work { margin-top: .6em; }
 .story .work + .text { margin-top: calc(var(--lh) * 2em); }  /* 크레딧 아래 2줄 */
 @media (min-width: 600px) { .work br.m { display: none; } }  /* 데스크탑: 한글 한 줄, 영문 한 줄 */
+.hj { font-size: 27px; }  /* 한자 27px 고정 (재영 2026-09-29) */
