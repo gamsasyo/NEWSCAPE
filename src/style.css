@@ -131,7 +131,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .rsvp .status { font-size: .85em; min-height: 1.6em; }
 .rsvp .status.err { color: #b3261e; }
 
-.credits { padding-block: calc(var(--fs) * 3) calc(var(--fs) * 6); font-size: .72em; color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
+.credits { padding-block: calc(var(--fs) * 3) calc(var(--lh) * 1em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 한 줄만 (재영 2026-09-29) */ font-size: .72em; color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
 .credits p + p { margin-top: calc(var(--lh) * 1em); }  /* 그룹 사이 한 줄 */
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
