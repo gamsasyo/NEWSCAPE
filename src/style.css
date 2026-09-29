@@ -127,7 +127,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
   padding: .3em 0; outline: none; width: 100%;
 }
 .field input:focus { border-bottom-width: 2px; }
-.rsvp .btn { justify-self: start; }  /* 크기·여백은 지도 버튼(.btn)과 동일 */
+.rsvp .btn { justify-self: start; font-size: calc(var(--fs-small) * .78 + 3px); }  /* 참석합니다: 지도 버튼보다 한 단계 큼 = 라벨 크기 (재영 2026-09-29) */
 .rsvp .status { font-size: calc(var(--fs-small) * .85); min-height: 1.6em; }
 .rsvp .status.err { color: #b3261e; }
 .rsvp .status:empty { display: none; }  /* 비었을 땐 자리 안 차지 → 참석합니다 → Director 정확히 3줄 */
@@ -144,3 +144,4 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .story .work + .text { margin-top: calc(var(--lh) * 2em); }  /* 크레딧 아래 2줄 */
 .hj { font-size: 29px; }  /* 한자 고정 — 27px에서 본문과 같이 +2 (재영 2026-09-29) */
 .mail { white-space: nowrap; letter-spacing: -.03em; }  /* 메일은 자간 좁혀 한 줄 (재영 2026-09-29) */
+.note { display: block; color: var(--muted); font-size: calc(var(--fs-small) * .72 + 3px); line-height: 1.25; margin-top: .3em; }  /* '뉴스케이프' 검색 안내 = 캡션 크기, 행간 좁게 (재영 2026-09-29) */
