@@ -2,7 +2,7 @@
   --bg: #fff;
   --fg: #111;
   --muted: #777;
-  --gutter: clamp(1rem, 4.4vw, 1.667rem);   /* 2026-09-29 재영: 9px가 너무 좁아 두 배로 → 폰 약 17px */
+  --gutter: clamp(1rem, 5vw, 1.667rem);   /* 2026-09-29 재영: 폰 좌우 여백 5% */
   --measure: var(--figure-max); /* 줄바꿈은 HTML의 <br>로 고정 (2026-09-27 재영 배치안) */
   --figure-max: 760px;
   --fs: clamp(31px, calc(6.8vw + 6px), 36px);   /* 2026-09-29 재영: 4px 키운 뒤 2px 더 (25~30 → 31~36) */
