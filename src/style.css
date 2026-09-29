@@ -105,7 +105,8 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .info dt { font-size: calc(var(--fs-small) * .78 + 3px); color: var(--muted); margin-top: calc(var(--lh) * var(--fs)); }  /* 항목 사이 본문 1줄 */
 .info dd { margin: .2em 0 0; }
 
-.links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: 1.2em; }
+.links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: calc((var(--fs-small) * .72 + 3px) * .2); }  /* 검색 안내 → 버튼 간격 = 안내문 줄 사이 간격(행간 1.4) (재영 2026-09-29) */
+.info dd:has(> .links) { margin-top: 0; }
 .btn {
   appearance: none; border: 1px solid var(--fg); background: transparent; color: var(--fg);
   font: inherit; font-size: calc(var(--fs-small) * .78); padding: .55em 1em; border-radius: 999px;  /* 재영 2026-09-27: 자전거·대중교통 라벨(dt)과 같은 크기 */
