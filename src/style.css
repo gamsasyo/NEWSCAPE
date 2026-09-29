@@ -5,7 +5,7 @@
   --gutter: clamp(1.5rem, 6vw, 2.5rem);
   --measure: var(--figure-max); /* 줄바꿈은 HTML의 <br>로 고정 (2026-09-27 재영 배치안) */
   --figure-max: 760px;
-  --fs: clamp(29px, calc(6.8vw + 4px), 34px);   /* 2026-09-29 재영: 전체 4px 키움 (25~30 → 29~34) */
+  --fs: clamp(31px, calc(6.8vw + 6px), 36px);   /* 2026-09-29 재영: 4px 키운 뒤 2px 더 (25~30 → 31~36) */
   --lh: 1.4;   /* 2026-09-29 재영: 1.65에서 15% 좁힘 */
   --ease: cubic-bezier(.22,.61,.36,1);
 }
@@ -36,7 +36,7 @@ p + p { margin-top: 1.4em; }
   background: var(--bg);
 }
 #intro img {
-  width: clamp(195px, 54vw, 285px);
+  width: clamp(234px, 64.8vw, 342px);  /* 2026-09-29 재영: 20% 키움 */
   height: auto;
   opacity: 0;
   transition: opacity .8s var(--ease);
@@ -98,8 +98,8 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 /* ── 서명 / 정보 ─────────────────────── */
 .story .text + .text.sign { margin-top: calc(var(--lh) * 3em); }  /* 서명 앞 3줄 띄움 (.story .text + .text 보다 세야 함) */
 /* 서명 → "NEWSCAPE 개관" 간격 = 히어로의 "모시는 글" → "Leave the noise" 간격과 동일
-   (히어로: 100svh − 위 10svh − 아래 14svh − 제목 1줄 − 태그라인 3줄) */
-.info { padding-block: calc(76svh - var(--lh) * 4em) 2em; }
+   (히어로: 100svh − 위 10svh − 아래 14svh − 제목 1줄 − 태그라인 2줄) */
+.info { padding-block: calc(76svh - var(--lh) * 3em) 2em; }
 .info h2 { font-size: 1em; font-weight: 500; margin: 0 0 1.2em; }
 .info dl { margin: 0; }
 .info dt { font-size: .78em; color: var(--muted); margin-top: 1.4em; }
@@ -141,5 +141,4 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .work { font-size: .72em; color: var(--muted); }
 .story .video + .work { margin-top: .6em; }
 .story .work + .text { margin-top: calc(var(--lh) * 2em); }  /* 크레딧 아래 2줄 */
-@media (min-width: 600px) { .work br.m { display: none; } }  /* 데스크탑: 한글 한 줄, 영문 한 줄 */
-.hj { font-size: 27px; }  /* 한자 27px 고정 (재영 2026-09-29) */
+.hj { font-size: 29px; }  /* 한자 고정 — 27px에서 본문과 같이 +2 (재영 2026-09-29) */
