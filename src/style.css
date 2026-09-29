@@ -68,16 +68,17 @@ p + p { margin-top: 1.4em; }
 }
 
 .hero {
-  min-height: 100svh;
+  min-height: 86svh;   /* 태그라인 위치는 그대로(화면 아래 14svh 위) — 아래 여백은 첫 사진 margin이 담당 */
   display: flex; flex-direction: column; justify-content: space-between;
-  padding-block: 10svh 14svh;
+  padding-block: 10svh 0;
 }
 .hero h1 { font-size: 1em; font-weight: 400; margin: 0; }
 .tagline { margin-top: 1.4em; }
 
-.story { padding-block: 4em 0; }
+.story { padding-block: 0; }
 .story > * + * { margin-top: 1.4em; }
 .story figure { margin-block: calc(var(--lh) * 2em); }  /* 위 형제 규칙(1.4em)보다 우선 */
+.story > figure:first-child { margin-top: calc(var(--lh) * 3em); }  /* Find the flat. 아래 정확히 3줄 (재영 2026-09-29) */
 .story .text + .text { margin-top: 1.4em; }
 
 /* ── 이미지 ─────────────────────────── */
@@ -96,13 +97,11 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 }
 
 /* ── 서명 / 정보 ─────────────────────── */
-.story .text + .text.sign { margin-top: calc(var(--lh) * 3em); }  /* 서명 앞 3줄 띄움 (.story .text + .text 보다 세야 함) */
-/* 서명 → "NEWSCAPE 개관" 간격 = 히어로의 "모시는 글" → "Leave the noise" 간격과 동일
-   (히어로: 100svh − 위 10svh − 아래 14svh − 제목 1줄 − 태그라인 2줄) */
-.info { padding-block: calc(76svh - var(--lh) * 3em) 2em; }
-.info h2 { font-size: 1em; font-weight: 500; margin: 0 0 1.2em; }
+.story .text + .text.sign { margin-top: calc(var(--lh) * 2em); }  /* 서명 앞 2줄 (원고) — .story .text + .text 보다 세야 함 */
+.info { padding-block: calc(var(--lh) * 3em) 0; }  /* 서명 → NEWSCAPE 3줄 (원고) */
+.info h2 { font-size: 1em; font-weight: 500; margin: 0; }
 .info dl { margin: 0; }
-.info dt { font-size: .78em; color: var(--muted); margin-top: 1.4em; }
+.info dt { font-size: .78em; color: var(--muted); margin-top: calc(var(--lh) * var(--fs)); }  /* 항목 사이 본문 1줄 */
 .info dd { margin: .2em 0 0; }
 
 .links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: 1.2em; }
@@ -116,9 +115,9 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 
 
 /* ── RSVP ───────────────────────────── */
-.rsvp { padding-block: 4em 3em; }
-.rsvp h2 { font-size: 1em; font-weight: 500; margin: 0 0 1.2em; }
-.rsvp form { max-width: 20em; display: grid; gap: 1.2em; }
+.rsvp { padding-block: calc(var(--lh) * 3em) 0; }  /* 기다리겠습니다 → 참석 여부 3줄 (원고) */
+.rsvp h2 { font-size: 1em; font-weight: 500; margin: 0 0 calc(var(--lh) * 1em); }
+.rsvp form { max-width: 20em; display: grid; gap: calc(var(--lh) * 1em); }
 .field { display: grid; gap: .35em; }
 .field label { font-size: .78em; color: var(--muted); }
 .field input {
@@ -130,8 +129,9 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .rsvp .btn { justify-self: start; }  /* 크기·여백은 지도 버튼(.btn)과 동일 */
 .rsvp .status { font-size: .85em; min-height: 1.6em; }
 .rsvp .status.err { color: #b3261e; }
+.rsvp .status:empty { display: none; }  /* 비었을 땐 자리 안 차지 → 참석합니다 → Director 정확히 3줄 */
 
-.credits { padding-block: calc(var(--fs) * 3) calc(var(--lh) * 1em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 한 줄만 (재영 2026-09-29) */ font-size: .72em; color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
+.credits { padding-block: calc(var(--lh) * var(--fs) * 3) calc(var(--lh) * 1em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 한 줄만 (재영 2026-09-29) */ font-size: .72em; color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
 .credits p + p { margin-top: calc(var(--lh) * 1em); }  /* 그룹 사이 한 줄 */
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
