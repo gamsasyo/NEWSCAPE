@@ -18,6 +18,7 @@ export function initRsvp() {
     if (!ENDPOINT) return fail('접수 준비 중입니다. 문의: 031-986-0041');
 
     btn.disabled = true;
+    document.documentElement.classList.add('rsvp-sending');   // 접수 끝날 때까지 자동 스크롤 멈춤
     status.className = 'status';
     status.textContent = '접수 중…';
     try {
@@ -33,6 +34,8 @@ export function initRsvp() {
     } catch (err) {
       btn.disabled = false;
       fail('접수에 실패했습니다. 031-986-0041 또는 newscape515@gmail.com 으로 알려주세요.');
+    } finally {
+      document.documentElement.classList.remove('rsvp-sending');   // 완료 메시지 뜬 뒤 1초 쉬고 자동 스크롤 재개
     }
   });
 

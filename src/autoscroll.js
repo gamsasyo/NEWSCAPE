@@ -2,7 +2,7 @@
 // - 사용자가 손대면(휠/터치/키) 즉시 넘겨주고,
 // - 아래로 던진 관성이 SPEED까지 감속하는 순간 그 속도를 그대로 이어받아 계속 간다 (속도 불연속 없음).
 // - 위로 올렸거나 손가락으로 딱 멈춘 경우엔 정지 → IDLE_MS 대기 → 0에서 RAMP_MS 동안 부드럽게 가속.
-// - 입력창에 포커스가 있거나 Lenis가 멈춘 상태(전체화면 이미지)에서는 움직이지 않는다.
+// - 입력창에 포커스가 있거나, 참석 접수 중이거나, Lenis가 멈춘 상태(전체화면 이미지)에서는 움직이지 않는다.
 const SPEED_PX_PER_S = 30; // 2026-09-27 재영: 프레임당 0.5px = 2프레임마다 1px, iOS 정수 스크롤에서 리듬 규칙적 (45는 4프레임마다 멈칫)
 const IDLE_MS = 1000;      // 완전 정지 후 다시 출발까지 (재영 2026-09-27: 3초 → 1초)
 const RAMP_MS = 2000;      // 정지 상태에서 SPEED까지 가속 시간
@@ -25,7 +25,8 @@ export function armAutoScroll(lenis, delayMs = 1500) {
   let held = false;    // 손가락/포인터가 화면에 닿아 있는 동안
   let armedAt = 0;     // 첫 출발 허용 시각
 
-  const typing = () => /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName ?? '');
+  const typing = () => /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName ?? '')
+    || document.documentElement.classList.contains('rsvp-sending');   // 참석 접수 중에도 멈춤 (rsvp.js)
   const easeInOut = (t) => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
 
   const startDrive = (now, fromVel) => {
