@@ -2,7 +2,7 @@
   --bg: #fff;
   --fg: #111;
   --muted: #777;
-  --gutter: clamp(1rem, 4vw, 1.667rem);   /* 2026-09-29 재영: 원래(1.5rem, 6vw, 2.5rem)에서 1/3 줄임 */
+  --gutter: clamp(.5rem, 2.2vw, 1.667rem);   /* 2026-09-29 재영: 폰에서 약 9px (스크린샷 빨간선) */
   --measure: var(--figure-max); /* 줄바꿈은 HTML의 <br>로 고정 (2026-09-27 재영 배치안) */
   --figure-max: 760px;
   --fs: clamp(31px, calc(6.8vw + 6px), 36px);   /* 2026-09-29 재영: 4px 키운 뒤 2px 더 (25~30 → 31~36) */
