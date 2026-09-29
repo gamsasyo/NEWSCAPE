@@ -63,9 +63,6 @@ p + p { margin-top: 1.4em; }
 .col {
   padding-inline: var(--gutter);
 }
-@media (max-width: 599px) {  /* 폰: 여백 당겨서 메일·〈디파처스〉·버스 줄이 한 줄에 (재영 2026-09-29) */
-  .col { padding-inline: 2.4vw .6vw; }
-}
 .text { max-width: var(--measure); }
 @media (min-width: 900px) {
   .col { padding-inline-start: clamp(2.5rem, 12vw, 14rem); }
@@ -146,3 +143,4 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .story .video + .work { margin-top: .6em; }
 .story .work + .text { margin-top: calc(var(--lh) * 2em); }  /* 크레딧 아래 2줄 */
 .hj { font-size: 29px; }  /* 한자 고정 — 27px에서 본문과 같이 +2 (재영 2026-09-29) */
+.mail { white-space: nowrap; letter-spacing: -.02em; }  /* 메일은 한 줄 — 왼쪽 정렬 유지, 넘치는 건 오른쪽 여백으로 (재영 2026-09-29) */
