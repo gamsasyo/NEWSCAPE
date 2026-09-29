@@ -24,6 +24,12 @@ function doPost(e) {
     const row = sh.getLastRow() + 1;
     sh.getRange(row, 1, 1, 4).setNumberFormats([['yyyy-mm-dd hh:mm', '@', '@', '@']]);
     sh.getRange(row, 1, 1, 4).setValues([[new Date(), name, phone, ua]]);
+    try {
+      // 신청 알림 메일 → 스크립트 소유 계정(갤러리 계정)으로
+      MailApp.sendEmail(Session.getEffectiveUser().getEmail(),
+        `[NEWSCAPE] 참석 신청 — ${name}`,
+        `성함: ${name}\n연락처: ${phone}\n\n지금까지 ${row - 1}명 신청\n${ss.getUrl()}`);
+    } catch (mailErr) {}  // 메일 실패해도 접수는 성공 처리
     return json({ ok: true });
   } catch (err) {
     return json({ ok: false, error: String(err) });
