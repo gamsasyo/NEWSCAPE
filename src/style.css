@@ -144,4 +144,4 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .story .work + .text { margin-top: calc(var(--lh) * 2em); }  /* 크레딧 아래 2줄 */
 .hj { font-size: 29px; }  /* 한자 고정 — 27px에서 본문과 같이 +2 (재영 2026-09-29) */
 .mail { white-space: nowrap; letter-spacing: -.03em; }  /* 메일은 자간 좁혀 한 줄 (재영 2026-09-29) */
-.note { display: block; color: var(--muted); font-size: calc(var(--fs-small) * .72 + 3px); line-height: 1.25; margin-top: .3em; }  /* '뉴스케이프' 검색 안내 = 캡션 크기, 행간 좁게 (재영 2026-09-29) */
+.note { display: block; color: var(--muted); font-size: calc(var(--fs-small) * .72 + 3px); margin-top: .3em; }  /* '뉴스케이프' 검색 안내 = 캡션 크기·행간 (〈디파처스〉 크레딧과 동일, 재영 2026-09-29) */
