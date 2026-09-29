@@ -6,6 +6,7 @@
   --measure: var(--figure-max); /* 줄바꿈은 HTML의 <br>로 고정 (2026-09-27 재영 배치안) */
   --figure-max: 760px;
   --fs: clamp(31px, calc(6.8vw + 6px), 36px);   /* 2026-09-29 재영: 4px 키운 뒤 2px 더 (25~30 → 31~36) */
+  --fs-small: clamp(25px, 6.8vw, 30px);   /* 회색 글씨·버튼·캡션 기준 = 9/28 본문 크기 (재영 2026-09-29) */
   --lh: 1.4;   /* 2026-09-29 재영: 1.65에서 15% 좁힘 */
   --ease: cubic-bezier(.22,.61,.36,1);
 }
@@ -89,7 +90,7 @@ figure {
 }
 figure a { display: block; position: relative; cursor: zoom-in; }
 figure img { width: 100%; background: #eee; }
-figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
+figcaption { font-size: calc(var(--fs-small) * .72); color: var(--muted); margin-top: .6em; }
 /* 폰 가로모드: 이미지는 화면 높이에 맞춰 줄이고 가운데 정렬 (텍스트는 그대로 좌측) */
 @media (orientation: landscape) and (max-height: 500px) {
   figure { max-width: none; }
@@ -101,13 +102,13 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .info { padding-block: calc(var(--lh) * 3em) 0; }  /* 서명 → NEWSCAPE 3줄 (원고) */
 .info h2 { font-size: 1em; font-weight: 500; margin: 0; }
 .info dl { margin: 0; }
-.info dt { font-size: .78em; color: var(--muted); margin-top: calc(var(--lh) * var(--fs)); }  /* 항목 사이 본문 1줄 */
+.info dt { font-size: calc(var(--fs-small) * .78); color: var(--muted); margin-top: calc(var(--lh) * var(--fs)); }  /* 항목 사이 본문 1줄 */
 .info dd { margin: .2em 0 0; }
 
 .links { display: flex; flex-wrap: wrap; gap: .5em; margin-top: 1.2em; }
 .btn {
   appearance: none; border: 1px solid var(--fg); background: transparent; color: var(--fg);
-  font: inherit; font-size: .78em; padding: .55em 1em; border-radius: 999px;  /* 재영 2026-09-27: 자전거·대중교통 라벨(dt)과 같은 크기 */
+  font: inherit; font-size: calc(var(--fs-small) * .78); padding: .55em 1em; border-radius: 999px;  /* 재영 2026-09-27: 자전거·대중교통 라벨(dt)과 같은 크기 */
   cursor: pointer; transition: background .2s, color .2s;
 }
 .btn:hover, .btn:focus-visible { background: var(--fg); color: var(--bg); outline: none; }
@@ -119,7 +120,7 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 .rsvp h2 { font-size: 1em; font-weight: 500; margin: 0 0 calc(var(--lh) * 1em); }
 .rsvp form { max-width: 20em; display: grid; gap: calc(var(--lh) * 1em); }
 .field { display: grid; gap: .35em; }
-.field label { font-size: .78em; color: var(--muted); }
+.field label { font-size: calc(var(--fs-small) * .78); color: var(--muted); }
 .field input {
   font: inherit; color: var(--fg); background: transparent;
   border: 0; border-bottom: 1px solid var(--fg); border-radius: 0;
@@ -127,18 +128,18 @@ figcaption { font-size: .72em; color: var(--muted); margin-top: .6em; }
 }
 .field input:focus { border-bottom-width: 2px; }
 .rsvp .btn { justify-self: start; }  /* 크기·여백은 지도 버튼(.btn)과 동일 */
-.rsvp .status { font-size: .85em; min-height: 1.6em; }
+.rsvp .status { font-size: calc(var(--fs-small) * .85); min-height: 1.6em; }
 .rsvp .status.err { color: #b3261e; }
 .rsvp .status:empty { display: none; }  /* 비었을 땐 자리 안 차지 → 참석합니다 → Director 정확히 3줄 */
 
-.credits { padding-block: calc(var(--lh) * var(--fs) * 3) calc(var(--lh) * 1em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 한 줄만 (재영 2026-09-29) */ font-size: .72em; color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
+.credits { padding-block: calc(var(--lh) * var(--fs) * 3) calc(var(--lh) * 1em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 한 줄만 (재영 2026-09-29) */ font-size: calc(var(--fs-small) * .72); color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
 .credits p + p { margin-top: calc(var(--lh) * 1em); }  /* 그룹 사이 한 줄 */
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
 .video { max-width: var(--figure-max); aspect-ratio: 16 / 9; background: #eee; }
 .story .video { margin-top: calc(var(--lh) * 2em); }  /* 사진과 같은 위 2줄 */
 .video iframe { width: 100%; height: 100%; border: 0; display: block; }
-.work { font-size: .72em; color: var(--muted); }
+.work { font-size: calc(var(--fs-small) * .72); color: var(--muted); }
 .story .video + .work { margin-top: .6em; }
 .story .work + .text { margin-top: calc(var(--lh) * 2em); }  /* 크레딧 아래 2줄 */
 .hj { font-size: 29px; }  /* 한자 고정 — 27px에서 본문과 같이 +2 (재영 2026-09-29) */
