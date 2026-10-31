@@ -46,5 +46,6 @@ export function initDebug(lenis) {
     requestAnimationFrame(poll);
   })();
 
+  window.__dbg = log;   // autoscroll.js 의 DRIVE/STOP 로그
   log(`start ih${innerHeight} sh${sh} limit${Math.round(limit)}`);
 }

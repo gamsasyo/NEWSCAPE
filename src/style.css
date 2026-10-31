@@ -116,24 +116,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .btn[disabled] { opacity: .45; cursor: default; }
 
 
-/* ── RSVP ───────────────────────────── */
-.rsvp { padding-block: calc(var(--lh) * 3em) 0; }  /* 기다리겠습니다 → 참석 여부 3줄 (원고) */
-.rsvp h2 { font-size: 1em; font-weight: 500; margin: 0 0 calc(var(--lh) * 1em); }
-.rsvp form { max-width: 20em; display: grid; gap: calc(var(--lh) * 1em); }
-.field { display: grid; gap: .35em; }
-.field label { font-size: calc(var(--fs-small) * .78 + 3px); color: var(--muted); }
-.field input {
-  font: inherit; color: var(--fg); background: transparent;
-  border: 0; border-bottom: 1px solid var(--fg); border-radius: 0;
-  padding: .3em 0; outline: none; width: 100%;
-}
-.field input:focus { border-bottom-width: 2px; }
-.rsvp .btn { justify-self: start; font-size: calc(var(--fs-small) * .78 + 3px); }  /* 참석합니다: 지도 버튼보다 한 단계 큼 = 라벨 크기 (재영 2026-09-29) */
-.rsvp .status { font-size: calc(var(--fs-small) * .85); min-height: 1.6em; }
-.rsvp .status.err { color: #b3261e; }
-.rsvp .status:empty { display: none; }  /* 비었을 땐 자리 안 차지 → 참석합니다 → Director 정확히 3줄 */
-
-.credits { padding-block: calc(var(--lh) * var(--fs) * 3) calc(var(--lh) * 1em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 한 줄만 (재영 2026-09-29) */ font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
+.credits { padding-block: calc(var(--lh) * var(--fs) * 3) calc(var(--lh) * 3em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 3줄 (재영 2026-10-31) */ font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
 .credits p + p { margin-top: calc(var(--lh) * 1em); }  /* 그룹 사이 한 줄 */
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
@@ -146,3 +129,26 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .hj { font-size: 29px; }  /* 한자 고정 — 27px에서 본문과 같이 +2 (재영 2026-09-29) */
 .mail { white-space: nowrap; letter-spacing: -.03em; }  /* 메일은 자간 좁혀 한 줄 (재영 2026-09-29) */
 .note { display: block; color: var(--muted); font-size: calc(var(--fs-small) * .72 + 3px); margin-top: .3em; }  /* '뉴스케이프' 검색 안내 = 캡션 크기·행간 (〈디파처스〉 크레딧과 동일, 재영 2026-09-29) */
+
+/* ── 디렉터 프로필 (접힘, 클라이언트 요청 2026-10-31) ── */
+.profile { padding-block: calc(var(--lh) * 3em) 0; }
+.profile summary { list-style: none; cursor: pointer; }
+.profile summary::-webkit-details-marker { display: none; }
+.profile .more { display: inline-block; margin-top: .6em; font-size: calc(var(--fs-small) * .78); color: var(--fg); border-bottom: 1px solid currentColor; }
+.profile details[open] .more { display: none; }
+.bio { max-width: var(--measure); margin-top: calc(var(--lh) * 1em); font-size: calc(var(--fs-small) * .78 + 3px); color: var(--muted); }
+.bio + .bio { margin-top: .6em; }
+.bio a { border-bottom: 1px solid currentColor; }
+
+/* ── 정보 추가분 ───────────────────────── */
+.info dd.para { margin-top: calc(var(--lh) * 1em); }
+.faq { list-style: none; margin: 0; padding: 0; font-size: calc(var(--fs-small) * .78 + 3px); color: var(--fg); }  /* 라벨(자주 하시는 질문)과 같은 크기, 색만 진하게 (재영 2026-10-31) */
+.faq li { position: relative; padding-left: .9em; }
+.faq li::before { content: "–"; position: absolute; left: 0; }
+.faq li + li { margin-top: .5em; }
+.info dd:has(> .links) + dd:has(> .links) { margin-top: .5em; }
+
+/* ── 에필로그 영상 ─────────────────────── */
+.epilogue { padding-block: calc(var(--lh) * 3em) 0; }
+.info dt:first-child { margin-top: 0; }  /* 첫 항목은 섹션 padding(3줄)만 */
+.info dd:has(> .faq) + dd:has(> .links) { margin-top: calc(var(--lh) * 1em); }  /* 권장드립니다 → 예약·SNS 버튼 한 줄 (재영 2026-10-31) */

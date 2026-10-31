@@ -4,7 +4,6 @@ import './style.css';
 import { playIntro } from './intro.js';
 import { armAutoScroll } from './autoscroll.js';
 import { initGallery } from './gallery.js';
-import { initRsvp } from './rsvp.js';
 import { initSound } from './sound.js';
 
 history.scrollRestoration = 'manual';
@@ -15,7 +14,6 @@ lenis.stop();                   // 인트로 동안 스크롤 잠금
 window.scrollTo(0, 0);
 
 initGallery(lenis);
-initRsvp();
 initLinks();
 const sound = initSound();
 if (location.search.includes('debug')) import('./debug.js').then((m) => m.initDebug(lenis));
@@ -27,8 +25,15 @@ playIntro().then(() => {
 });
 
 function initLinks() {
-  // 주소 복사: 알림 팝업 없이 조용히 복사만 (재영 2026-09-27)
-  document.getElementById('copy-addr')?.addEventListener('click', (e) => {
-    navigator.clipboard?.writeText(e.currentTarget.dataset.addr).catch(() => {});
+  // 복사 버튼: 주소는 조용히 복사만 (재영 2026-09-27), data-done 있으면 잠깐 글자 바꿔 알림 (메일 복사)
+  document.querySelectorAll('[data-copy]').forEach((btn) => {
+    const label = btn.textContent;
+    btn.addEventListener('click', () => {
+      navigator.clipboard?.writeText(btn.dataset.copy).then(() => {
+        if (!btn.dataset.done) return;
+        btn.textContent = btn.dataset.done;
+        setTimeout(() => { btn.textContent = label; }, 1500);
+      }).catch(() => {});
+    });
   });
 }

@@ -33,6 +33,57 @@
       }
     }
   },
+  "pic-1": {
+    "src": "pic_1.jpg",
+    "width": 6240,
+    "height": 8736,
+    "sizes": {
+      "1200": {
+        "width": 857,
+        "height": 1200,
+        "bytes": 154884
+      },
+      "2400": {
+        "width": 1714,
+        "height": 2400,
+        "bytes": 590718
+      }
+    }
+  },
+  "pic-2": {
+    "src": "pic_2.jpg",
+    "width": 3900,
+    "height": 5200,
+    "sizes": {
+      "1200": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 171150
+      },
+      "2400": {
+        "width": 1800,
+        "height": 2400,
+        "bytes": 709934
+      }
+    }
+  },
+  "pic-3": {
+    "src": "pic_3.jpg",
+    "width": 4032,
+    "height": 3024,
+    "sizes": {
+      "1200": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 38612
+      },
+      "2400": {
+        "width": 1800,
+        "height": 2400,
+        "bytes": 103542
+      }
+    }
+  },
   "texture": {
     "src": "texture.jpeg",
     "width": 4284,
