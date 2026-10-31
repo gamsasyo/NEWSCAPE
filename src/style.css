@@ -116,7 +116,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .btn[disabled] { opacity: .45; cursor: default; }
 
 
-.credits { padding-block: calc(var(--lh) * var(--fs) * 2) calc(var(--lh) * 2em + env(safe-area-inset-bottom, 0px));  /* 영상 → Director 2줄, 김범수 아래 2줄 (재영 2026-10-31) */ font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
+.credits { padding-block: calc(var(--lh) * var(--fs) * 2) calc(var(--lh) * 1em + env(safe-area-inset-bottom, 0px));  /* 영상 → Director 2줄, 김범수 아래 1줄 (재영 2026-10-31) */ font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
 .credits p + p { margin-top: calc(var(--lh) * 1em); }  /* 그룹 사이 한 줄 */
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
