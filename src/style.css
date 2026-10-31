@@ -132,7 +132,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 
 /* ── 디렉터 프로필 (접힘, 클라이언트 요청 2026-10-31) ── */
 .profile { padding-block: calc(var(--lh) * 3em) 0; }
-.profile summary { list-style: none; cursor: pointer; }
+.profile summary { list-style: none; cursor: pointer; font-size: calc(var(--fs-small) * .78 + 3px); }  /* 이름 = '오시는 길' 라벨 크기 (재영 2026-10-31) */
 .profile summary::-webkit-details-marker { display: none; }
 .profile .more { display: inline-block; margin-top: .6em; font-size: calc(var(--fs-small) * .78); color: var(--fg); border-bottom: 1px solid currentColor; }
 .profile details[open] .more { display: none; }
