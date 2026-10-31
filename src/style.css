@@ -155,3 +155,6 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .info.small .faq { color: inherit; }
 .info.small .links { gap: .3em; }  /* 버튼 3개 한 줄, SE(320px)급은 2줄로 넘어가도 OK (재영 2026-10-31) */
 .info.small .btn { font-size: calc(var(--fs-small) * .62); padding: .5em .7em; white-space: nowrap; }
+.nw { white-space: nowrap; }  /* 따옴표·괄호 묶음 줄바꿈 금지 (재영 2026-10-31) */
+.bus { letter-spacing: -.05em; }  /* 13 mini(375px)에서 한 줄 */
+@media (max-width: 359px) { .bus { white-space: normal; } }  /* SE급은 줄바꿈 허용 */
