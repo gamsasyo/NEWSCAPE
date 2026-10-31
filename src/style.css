@@ -145,7 +145,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .faq { list-style: none; margin: 0; padding: 0; font-size: calc(var(--fs-small) * .78 + 3px); color: var(--fg); }  /* 라벨(자주 하시는 질문)과 같은 크기, 색만 진하게 (재영 2026-10-31) */
 .faq li { position: relative; padding-left: .9em; }
 .faq li::before { content: "–"; position: absolute; left: 0; }
-.faq li + li { margin-top: .1em; }  /* 답 사이 < 제목→첫 답(문의→전화와 같은 .2em) (재영 2026-10-31) */
+.faq li + li { margin-top: .2em; }  /* 답 사이 = 제목→첫 답 (재영 2026-10-31) */
 .info dd:has(> .links) + dd:has(> .links) { margin-top: .5em; }
 
 /* ── 에필로그 영상 ─────────────────────── */
@@ -160,5 +160,5 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .info.small .links { gap: .3em; }  /* 버튼 3개 한 줄, SE(320px)급은 2줄로 넘어가도 OK (재영 2026-10-31) */
 .info.small .btn { font-size: calc(var(--fs-small) * .62); padding: .5em .7em; white-space: nowrap; }
 .nw { white-space: nowrap; }  /* 따옴표·괄호 묶음 줄바꿈 금지 (재영 2026-10-31) */
-.bus { letter-spacing: -.05em; }  /* 13 mini(375px)에서 한 줄 */
+.tight { letter-spacing: -.03em; }  /* 버스 안내 13 mini(375px) 한 줄 + (월, 화 휴관)도 같은 자간 (재영 2026-10-31) */
 @media (max-width: 359px) { .bus { white-space: normal; } }  /* SE급은 줄바꿈 허용 */
