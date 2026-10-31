@@ -17,10 +17,11 @@ function typekitDone() {
 }
 
 function preload() {
-  const imgs = [...document.querySelectorAll('#page img')].map((img) => {
-    img.loading = 'eager';
-    return img.decode().catch(() => {});
-  });
+  // 첫 화면 근처 2장만 디코딩까지 기다린다. 8장 전부 디코딩하면 iOS가 메모리 압박으로 버렸다가
+  // 출발 순간 다시 디코딩해서 버벅인다 (재영 2026-10-31). 나머지는 내려받기만 미리.
+  const all = [...document.querySelectorAll('#page img')];
+  all.forEach((img) => { img.loading = 'eager'; });
+  const imgs = all.slice(0, 2).map((img) => img.decode().catch(() => {}));
   return Promise.all([typekitDone().then(() => document.fonts.ready), ...imgs]);
 }
 

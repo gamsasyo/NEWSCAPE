@@ -142,6 +142,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .faq li { position: relative; padding-left: .9em; }
 .faq li::before { content: "–"; position: absolute; left: 0; }
 .faq li + li { margin-top: .5em; }
+.info dd:has(> .faq) { margin-top: .8em; }  /* 제목 → 첫 답(.8em) > 답 사이(.5em) (재영 2026-10-31) */
 .info dd:has(> .links) + dd:has(> .links) { margin-top: .5em; }
 
 /* ── 에필로그 영상 ─────────────────────── */

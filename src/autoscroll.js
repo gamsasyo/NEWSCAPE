@@ -65,7 +65,9 @@ export function armAutoScroll(lenis, delayMs = 1500) {
       else {
         const t = Math.min((now - rampAt) / RAMP_MS, 1);
         vel = rampFrom + (SPEED_PX_PER_S - rampFrom) * easeInOut(t);
-        const v = TIERS.findLast((x) => x <= vel + 0.01) ?? TIERS[0];   // 계단 속도
+        // 정지에서 출발할 땐 가속 없이 바로 30px/s(2프레임마다 1px). 느린 계단(8·6·4프레임마다 1px)은
+        // 폰에서 툭·툭 끊겨 보여서 '버벅이며 출발'의 원인이었다 (재영 2026-10-31).
+        const v = rampFrom === 0 ? SPEED_PX_PER_S : (TIERS.findLast((x) => x <= vel + 0.01) ?? TIERS[0]);
         pos += v * (dtEma < 0.0115 ? 1 / 120 : 1 / 60);   // 실제 dt 대신 고정 프레임 → 1px 리듬이 규칙적
         if (pos >= lenis.limit) { mode = 'end'; }        // 바닥: 멈추고 다음 입력 대기
         else lenis.scrollTo(pos, { immediate: true, force: true });
