@@ -145,8 +145,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .faq { list-style: none; margin: 0; padding: 0; font-size: calc(var(--fs-small) * .78 + 3px); color: var(--fg); }  /* 라벨(자주 하시는 질문)과 같은 크기, 색만 진하게 (재영 2026-10-31) */
 .faq li { position: relative; padding-left: .9em; }
 .faq li::before { content: "–"; position: absolute; left: 0; }
-.faq li + li { margin-top: .5em; }
-.info dd:has(> .faq) { margin-top: .8em; }  /* 제목 → 첫 답(.8em) > 답 사이(.5em) (재영 2026-10-31) */
+.faq li + li { margin-top: .1em; }  /* 답 사이 < 제목→첫 답(문의→전화와 같은 .2em) (재영 2026-10-31) */
 .info dd:has(> .links) + dd:has(> .links) { margin-top: .5em; }
 
 /* ── 에필로그 영상 ─────────────────────── */
