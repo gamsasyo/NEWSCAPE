@@ -152,3 +152,8 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .epilogue { padding-block: calc(var(--lh) * 3em) 0; }
 .info dt:first-child { margin-top: 0; }  /* 첫 항목은 섹션 padding(3줄)만 */
 .info dd:has(> .faq) + dd:has(> .links) { margin-top: calc(var(--lh) * 1em); }  /* 권장드립니다 → 예약·SNS 버튼 한 줄 (재영 2026-10-31) */
+
+/* ── 프로필 이후 안내: 글자 작게, 제목 진하게 본문 흐리게 (클라이언트 2026-10-31) ── */
+.info.small dt { color: var(--fg); }
+.info.small dd { font-size: calc(var(--fs-small) * .78 + 3px); color: var(--muted); }
+.info.small .faq { color: inherit; }
