@@ -68,18 +68,14 @@ p + p { margin-top: 1.4em; }
   .col { padding-inline-start: clamp(2.5rem, 12vw, 14rem); }
 }
 
-.hero {
-  min-height: 86svh;   /* 태그라인 위치는 그대로(화면 아래 14svh 위) — 아래 여백은 첫 사진 margin이 담당 */
-  display: flex; flex-direction: column; justify-content: space-between;
-  padding-block: 10svh 0;
-}
+.hero { padding-block: 10svh 0; }  /* NEWSCAPE → photo1 2줄 → 태그라인 2줄 (원고 2026-10-31) — figure 기본 margin */
 .hero h1 { font-size: 1em; font-weight: 400; margin: 0; }
-.tagline { margin-top: 1.4em; }
+.tagline { margin: 0; }
 
 .story { padding-block: 0; }
 .story > * + * { margin-top: 1.4em; }
 .story figure { margin-block: calc(var(--lh) * 2em); }  /* 위 형제 규칙(1.4em)보다 우선 */
-.story > figure:first-child { margin-top: calc(var(--lh) * 3em); }  /* Find the flat. 아래 정확히 3줄 (재영 2026-09-29) */
+.story > :first-child { margin-top: calc(var(--lh) * 3em); }  /* Find the flat. 아래 3줄 (재영 2026-09-29) */
 .story .text + .text { margin-top: 1.4em; }
 
 /* ── 이미지 ─────────────────────────── */
@@ -116,7 +112,7 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .btn[disabled] { opacity: .45; cursor: default; }
 
 
-.credits { padding-block: calc(var(--lh) * var(--fs) * 3) calc(var(--lh) * 3em + env(safe-area-inset-bottom, 0px));  /* 김범수 아래 3줄 (재영 2026-10-31) */ font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
+.credits { padding-block: calc(var(--lh) * var(--fs) * 2) calc(var(--lh) * 2em + env(safe-area-inset-bottom, 0px));  /* 영상 → Director 2줄, 김범수 아래 2줄 (재영 2026-10-31) */ font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); }  /* 〈디파처스〉 캡션과 같은 크기·회색 */
 .credits p + p { margin-top: calc(var(--lh) * 1em); }  /* 그룹 사이 한 줄 */
 
 /* ── 영상 (디파처스, Vimeo) ─────────── */
@@ -157,3 +153,5 @@ figcaption { font-size: calc(var(--fs-small) * .72 + 3px); color: var(--muted); 
 .info.small dt { color: var(--fg); }
 .info.small dd { font-size: calc(var(--fs-small) * .78 + 3px); color: var(--muted); }
 .info.small .faq { color: inherit; }
+.info.small .links { gap: .3em; }  /* 버튼 3개 한 줄, SE(320px)급은 2줄로 넘어가도 OK (재영 2026-10-31) */
+.info.small .btn { font-size: calc(var(--fs-small) * .62); padding: .5em .7em; white-space: nowrap; }

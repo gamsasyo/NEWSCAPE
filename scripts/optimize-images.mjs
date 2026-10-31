@@ -30,7 +30,7 @@ for (const f of files) {
     const info = await input
       .clone()
       .resize({ width: w, height: w, fit: 'inside', withoutEnlargement: true })
-      .webp({ quality: 80, effort: 5 })
+      .webp({ quality: w > 1200 ? 70 : 80, effort: 5 })  // 2400(확대용)은 용량 위해 70
       .toFile(out);
     entry.sizes[w] = { width: info.width, height: info.height, bytes: info.size };
     console.log(`${out}  ${info.width}x${info.height}  ${(info.size / 1024).toFixed(0)}KB`);

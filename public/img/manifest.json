@@ -1,21 +1,4 @@
 {
-  "birds": {
-    "src": "birds.jpeg",
-    "width": 1477,
-    "height": 1477,
-    "sizes": {
-      "1200": {
-        "width": 1200,
-        "height": 1200,
-        "bytes": 25976
-      },
-      "2400": {
-        "width": 1477,
-        "height": 1477,
-        "bytes": 35260
-      }
-    }
-  },
   "panorama": {
     "src": "main visual.jpg",
     "width": 11761,
@@ -29,92 +12,143 @@
       "2400": {
         "width": 2400,
         "height": 1200,
-        "bytes": 315352
+        "bytes": 233558
       }
     }
   },
-  "pic-1": {
-    "src": "pic_1.jpg",
-    "width": 6240,
-    "height": 8736,
+  "photo1": {
+    "src": "photo1.jpg",
+    "width": 1477,
+    "height": 1477,
+    "sizes": {
+      "1200": {
+        "width": 1200,
+        "height": 1200,
+        "bytes": 23996
+      },
+      "2400": {
+        "width": 1477,
+        "height": 1477,
+        "bytes": 23984
+      }
+    }
+  },
+  "photo2": {
+    "src": "photo2.jpg",
+    "width": 3000,
+    "height": 2250,
+    "sizes": {
+      "1200": {
+        "width": 900,
+        "height": 1200,
+        "bytes": 358864
+      },
+      "2400": {
+        "width": 1800,
+        "height": 2400,
+        "bytes": 1082462
+      }
+    }
+  },
+  "photo3": {
+    "src": "photo3.jpg",
+    "width": 1080,
+    "height": 1350,
+    "sizes": {
+      "1200": {
+        "width": 960,
+        "height": 1200,
+        "bytes": 105578
+      },
+      "2400": {
+        "width": 1080,
+        "height": 1350,
+        "bytes": 94628
+      }
+    }
+  },
+  "photo4": {
+    "src": "photo4.jpg",
+    "width": 768,
+    "height": 1024,
+    "sizes": {
+      "1200": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 89480
+      },
+      "2400": {
+        "width": 768,
+        "height": 1024,
+        "bytes": 67970
+      }
+    }
+  },
+  "photo5": {
+    "src": "photo5.jpg",
+    "width": 2143,
+    "height": 3000,
     "sizes": {
       "1200": {
         "width": 857,
         "height": 1200,
-        "bytes": 154884
+        "bytes": 156170
       },
       "2400": {
         "width": 1714,
         "height": 2400,
-        "bytes": 590718
+        "bytes": 409308
       }
     }
   },
-  "pic-2": {
-    "src": "pic_2.jpg",
-    "width": 3900,
-    "height": 5200,
+  "photo6": {
+    "src": "photo6.jpg",
+    "width": 3000,
+    "height": 2250,
     "sizes": {
       "1200": {
         "width": 900,
         "height": 1200,
-        "bytes": 171150
+        "bytes": 315926
       },
       "2400": {
         "width": 1800,
         "height": 2400,
-        "bytes": 709934
+        "bytes": 914506
       }
     }
   },
-  "pic-3": {
-    "src": "pic_3.jpg",
-    "width": 4032,
-    "height": 3024,
+  "photo7": {
+    "src": "photo7.jpg",
+    "width": 3000,
+    "height": 2250,
     "sizes": {
       "1200": {
         "width": 900,
         "height": 1200,
-        "bytes": 38612
+        "bytes": 38248
       },
       "2400": {
         "width": 1800,
         "height": 2400,
-        "bytes": 103542
+        "bytes": 76068
       }
     }
   },
-  "texture": {
-    "src": "texture.jpeg",
-    "width": 4284,
-    "height": 5712,
+  "photo8": {
+    "src": "photo8.jpg",
+    "width": 3000,
+    "height": 2250,
     "sizes": {
       "1200": {
         "width": 900,
         "height": 1200,
-        "bytes": 364706
+        "bytes": 46092
       },
       "2400": {
         "width": 1800,
         "height": 2400,
-        "bytes": 1395862
-      }
-    }
-  },
-  "tree": {
-    "src": "tree.jpeg",
-    "width": 3024,
-    "height": 4032,
-    "sizes": {
-      "1200": {
-        "width": 900,
-        "height": 1200,
-        "bytes": 131084
-      },
-      "2400": {
-        "width": 1800,
-        "height": 2400,
-        "bytes": 392828
+        "bytes": 100842
       }
     }
   }
