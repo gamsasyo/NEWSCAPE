@@ -68,14 +68,18 @@ p + p { margin-top: 1.4em; }
   .col { padding-inline-start: clamp(2.5rem, 12vw, 14rem); }
 }
 
-.hero { padding-block: 10svh 0; }  /* NEWSCAPE → photo1 2줄 → 태그라인 2줄 (원고 2026-10-31) — figure 기본 margin */
+.hero {
+  min-height: 86svh;   /* 태그라인 위치는 그대로(화면 아래 14svh 위) — 아래 여백은 첫 사진 margin이 담당 */
+  display: flex; flex-direction: column; justify-content: space-between;
+  padding-block: 10svh 0;
+}
 .hero h1 { font-size: 1em; font-weight: 400; margin: 0; }
-.tagline { margin: 0; }
+.tagline { margin-top: 1.4em; }
 
 .story { padding-block: 0; }
 .story > * + * { margin-top: 1.4em; }
 .story figure { margin-block: calc(var(--lh) * 2em); }  /* 위 형제 규칙(1.4em)보다 우선 */
-.story > :first-child { margin-top: calc(var(--lh) * 3em); }  /* Find the flat. 아래 3줄 (재영 2026-09-29) */
+.story > :first-child { margin-top: calc(var(--lh) * 2em); }  /* Find the flat. → photo1 2줄 (원고 2026-10-31) */
 .story .text + .text { margin-top: 1.4em; }
 
 /* ── 이미지 ─────────────────────────── */
